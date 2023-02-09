@@ -34,11 +34,12 @@ const Header = () => {
               .get(`https://restcountries.com/v3.1/name/${input}`)
               .then((res) => {
                 console.log(res.data);
+                dispatch(deleteDisplayCountry())
                 dispatch(deletePotentialCountries());
                 dispatch(setPotentialCountries(res.data));
-                dispatch(deleteDisplayCountry())
               })
               .catch((err) => {
+                console.log(err);
                 alert("No countries found that match your search!");
               });
           }}

@@ -1,9 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import initialCountry from "../../assets/initialCountry"
 
-
-
-
 export const displayCountrySlice = createSlice({
     name: "displayCounrty",
     initialState: {
