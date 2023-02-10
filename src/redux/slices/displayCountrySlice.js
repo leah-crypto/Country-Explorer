@@ -10,7 +10,7 @@ export const displayCountrySlice = createSlice({
         setDisplayCountry: (state, action) => {
             state.value = action.payload
         },
-        deleteDisplay: (state) => {
+        deleteDisplayCountry: (state) => {
             state.value = null
         }
     }

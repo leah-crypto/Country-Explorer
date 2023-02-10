@@ -16,7 +16,7 @@ const Weather = () => {
     const options = {
       method: "GET",
       url: "https://weatherapi-com.p.rapidapi.com/current.json",
-      params: { q: "38.9, -77" },
+      params: { q: `${latitude}, ${longitude}` },
       headers: {
         "X-RapidAPI-Key": "36db981753mshf7779b00ac093ddp12783fjsn6c79b9fff60c",
         "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
@@ -27,6 +27,7 @@ const Weather = () => {
       .request(options)
       .then(function (response) {
         console.log(response.data);
+        setWeather(response.data)
       })
       .catch(function (error) {
         console.error(error);
